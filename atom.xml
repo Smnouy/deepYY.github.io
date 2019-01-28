@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Smnouy</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-01-28T15:27:23.566Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Smnouy,596903325@qq.com</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>P4-CoDel: Active Queue Management in Programmable Data Planes</title>
+    <link href="http://yoursite.com/2019/01/28/P4-CoDel-Active-Queue-Management-in-Programmable-Data-Planes/"/>
+    <id>http://yoursite.com/2019/01/28/P4-CoDel-Active-Queue-Management-in-Programmable-Data-Planes/</id>
+    <published>2019-01-28T15:25:36.000Z</published>
+    <updated>2019-01-28T15:27:23.566Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><blockquote><p>如今，高延时仍然是网络中需要解决的关键问题。而造成高延时的一个重要原因是：<a href="https://en.wikipedia.org/wiki/Bufferbloat" target="_blank" rel="noopener">Bufferbloat Problem</a>。在解决这个问题的过程中，存在两种方法：1、Passive Queue Management （PQM）。2、<a href="https://en.wikipedia.org/wiki/Active_queue_management" target="_blank" rel="noopener">Active Queue Management</a> （AQM）。这篇论文在P4上实现CoDel（Controlled Delay），其中CoDel是AQM的算法之一。<br><br>关于AQM的综述：Internet主动式队列管理机制综述：<a href="http://www.ccidnet.com/2002/1108/30259.shtml?tdsourcetag=s_pcqq_aiomsg" target="_blank" rel="noopener">www.ccidnet.com/2002/1108/30259.shtml?tdsourcetag=s_pcqq_aiomsg</a></p></blockquote><h2 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h2><ul><li><p>随着互联网流量的剧增，而大多数传输的数据是基于面向连接的协议，特别是TCP。TCP具有自己的拥塞控制机制。当高带宽链路转发到低带宽链路便有可能发生拥塞，而这拥塞主要受到交换机或路由器的出端口处的分组缓存的影响。</p></li><li><p>通常，缓存区的大小跟RTT和链路的容量。而RTT既有低于10ms（CDN）又有高于200ms。所以合适的缓存区大小主要又RTT影响。当缓存被数据包充满并且开始丢包，这变导致了高延时（Bufferbloat）。而这极大的增加了数据传输的延时。<br><img src="https://img2018.cnblogs.com/blog/885895/201901/885895-20190102225054896-236082564.png" alt=""></p></li><li><p>为了解决这个问题，出现了许多相关PQM和AQM的算法，例如本文应用的CoDel。<br><img src="https://img2018.cnblogs.com/blog/885895/201901/885895-20190102225151954-1944263133.png" alt=""> </p></li><li>P4是可编程数据平面的语言，其可以不需要新的ASICs从而增加新的功能。<br><img src="https://img2018.cnblogs.com/blog/885895/201901/885895-20190102224618683-2035809353.png" alt=""></li></ul><h2 id="二、系统设计"><a href="#二、系统设计" class="headerlink" title="二、系统设计"></a>二、系统设计</h2><ul><li><p>将CoDel应用于P4中<br><img src="https://img2018.cnblogs.com/blog/885895/201901/885895-20190102225558031-1683078178.png" alt=""></p></li><li><p>相关Github:<a href="https://github.com/ralfkundel/p4-codel" target="_blank" rel="noopener">https://github.com/ralfkundel/p4-codel</a></p></li><li><p>PS：论文实验已经复现</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;如今，高延时仍然是网络中需要解决的关键问题。而造成高延时的一个重要原因是：&lt;a href=&quot;https://en.
+      
+    
+    </summary>
+    
+    
+      <category term="P4,Paper" scheme="http://yoursite.com/tags/P4-Paper/"/>
+    
+  </entry>
+  
+</feed>
