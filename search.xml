@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[P4-CoDel: Active Queue Management in Programmable Data Planes]]></title>
     <url>%2F2019%2F01%2F28%2FP4-CoDel-Active-Queue-Management-in-Programmable-Data-Planes%2F</url>
-    <content type="text"><![CDATA[背景 如今，高延时仍然是网络中需要解决的关键问题。而造成高延时的一个重要原因是：Bufferbloat Problem。在解决这个问题的过程中，存在两种方法：1、Passive Queue Management （PQM）。2、Active Queue Management （AQM）。这篇论文在P4上实现CoDel（Controlled Delay），其中CoDel是AQM的算法之一。关于AQM的综述：Internet主动式队列管理机制综述：www.ccidnet.com/2002/1108/30259.shtml?tdsourcetag=s_pcqq_aiomsg 一、介绍 随着互联网流量的剧增，而大多数传输的数据是基于面向连接的协议，特别是TCP。TCP具有自己的拥塞控制机制。当高带宽链路转发到低带宽链路便有可能发生拥塞，而这拥塞主要受到交换机或路由器的出端口处的分组缓存的影响。 通常，缓存区的大小跟RTT和链路的容量。而RTT既有低于10ms（CDN）又有高于200ms。所以合适的缓存区大小主要又RTT影响。当缓存被数据包充满并且开始丢包，这变导致了高延时（Bufferbloat）。而这极大的增加了数据传输的延时。 为了解决这个问题，出现了许多相关PQM和AQM的算法，例如本文应用的CoDel。 P4是可编程数据平面的语言，其可以不需要新的ASICs从而增加新的功能。 二、系统设计 将CoDel应用于P4中 相关Github:https://github.com/ralfkundel/p4-codel PS：论文实验已经复现]]></content>
+    <content type="text"><![CDATA[背景 如今，高延时仍然是网络中需要解决的关键问题。而造成高延时的一个重要原因是：Bufferbloat Problem。在解决这个问题的过程中，存在两种方法：1、Passive Queue Management （PQM）。2、Active Queue Management （AQM）。这篇论文在P4上实现CoDel（Controlled Delay），其中CoDel是AQM的算法之一。关于AQM的综述：Internet主动式队列管理机制综述 一、介绍 随着互联网流量的剧增，而大多数传输的数据是基于面向连接的协议，特别是TCP。TCP具有自己的拥塞控制机制。当高带宽链路转发到低带宽链路便有可能发生拥塞，而这拥塞主要受到交换机或路由器的出端口处的分组缓存的影响。 通常，缓存区的大小跟RTT和链路的容量。而RTT既有低于10ms（CDN）又有高于200ms。所以合适的缓存区大小主要又RTT影响。当缓存被数据包充满并且开始丢包，这变导致了高延时（Bufferbloat）。而这极大的增加了数据传输的延时。 为了解决这个问题，出现了许多相关PQM和AQM的算法，例如本文应用的CoDel。 P4是可编程数据平面的语言，其可以不需要新的ASICs从而增加新的功能。 二、系统设计 将CoDel应用于P4中 相关Github:https://github.com/ralfkundel/p4-codel PS：论文实验已经复现]]></content>
       <tags>
         <tag>P4,Paper</tag>
       </tags>
